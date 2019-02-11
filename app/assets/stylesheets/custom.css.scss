@@ -1,0 +1,35 @@
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url("cover_image.jpg");
+  background-size: cover;
+  height: 300px;
+  width: 1100px;
+}
+
+.jumbotron h1 {
+  color: black;
+  font-weight: bold;
+  background-blend-mode: hue;
+}
+
+.jumbotron h2 {
+  color: black;
+  font-weight: bold;
+}
