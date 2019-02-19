@@ -21,6 +21,17 @@ class RecipesTest < ActionDispatch::IntegrationTest
     assert_template "recipes/index"
     assert_match @recipe1.name, response.body
     assert_match @recipe2.name, response.body
+    assert_select "a[href=?]", recipe_path(@recipe1), text: @recipe1.name
+    assert_select "a[href=?]", recipe_path(@recipe2), text: @recipe2.name
+  end
+
+  test "should get recipe show page" do
+    get recipe_path(@recipe1)
+    assert_template "recipes/show"
+    assert_match @recipe1.name, response.body
+    assert_match @recipe1.description, response.body
+    assert_match @recipe1.chef.name, response.body
+
   end
 
 end
